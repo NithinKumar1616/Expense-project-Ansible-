@@ -1,5 +1,5 @@
 - name: Creating a database server
-  Host: mysql
+  hosts: mysql
   become: yes
 
   tasks: 
