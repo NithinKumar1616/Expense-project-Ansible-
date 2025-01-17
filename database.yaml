@@ -3,6 +3,13 @@
   become: yes
 
   tasks: 
+  - name: Install dependencies
+    ansible.builtin.pip:
+      name: "{{ item }}"
+      executable: pip3.9
+    loop:
+    - PyMySQL
+
   - name: Install Mysql
     ansible.builtin.package:
      name: mysql-server
