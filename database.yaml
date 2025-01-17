@@ -1,8 +1,6 @@
 - name: Creating a database server
   hosts: mysql
   become: yes
-  vars:
-    mysql_root_password: NithinAnsible
 
   tasks: 
   - name: Install dependencies
@@ -35,6 +33,10 @@
   - name: print the output
     ansible.builtin.debug:
       msg: "MySQL info: {{ mysql_info }}"
+
+  - name: Create a root password
+     ansible.builtin.command: " mysql_secure_installation --set-root-pass {{ mysql_root_password }} "
+    when: mysql_info.failed is true
 
 
 
