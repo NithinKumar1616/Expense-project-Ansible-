@@ -4,7 +4,4 @@
   
   tasks:
   - name: Disable Node Js
-    community.general.npm:
-     name: nodejs
-     global: true
-     state: absent
+    ansible.builtin.command: dnf module disable nodejs -y
