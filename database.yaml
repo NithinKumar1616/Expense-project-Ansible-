@@ -10,6 +10,7 @@
       name: "{{ item }}"
       executable: pip3.9
     loop:
+    - cryptography
     - PyMySQL
 
   - name: Install Mysql
