@@ -1,0 +1,10 @@
+- name: Creating Backend server
+  hosts: backend
+  become: yes
+  
+  tasks:
+  - name: Disable Node Js
+    community.general.npm:
+     name: nodejs
+     global: true
+     state: absent
