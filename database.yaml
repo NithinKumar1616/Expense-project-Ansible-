@@ -1,6 +1,8 @@
 - name: Creating a database server
   hosts: mysql
   become: yes
+  vars:
+    mysql_root_password: NithinAnsible
 
   tasks: 
   - name: Install dependencies
