@@ -1,6 +1,6 @@
--name: Creating a database server
- Host: mysql
- become: yes
+- name: Creating a database server
+  Host: mysql
+  become: yes
 
   tasks: 
   - name: Install Mysql
@@ -13,5 +13,5 @@
     name: mysql
     enabled: yes
     state: started
-    
+
 
