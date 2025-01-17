@@ -1,0 +1,10 @@
+-name: Creating a database server
+ Host: mysql
+ become: yes
+
+  tasks: 
+  - name: Install Mysql
+    community.mysql.mysql_db:
+    name: mysql-server
+    state: present
+
