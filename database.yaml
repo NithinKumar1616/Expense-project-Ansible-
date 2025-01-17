@@ -5,13 +5,13 @@
   tasks: 
   - name: Install Mysql
     ansible.builtin.package:
-    name: mysql-server
-    state: present
+     name: mysql-server
+     state: present
 
   - name: Enable and start Mysql
     ansible.builtin.service:
-    name: mysql
-    enabled: yes
-    state: started
+     name: mysql
+     enabled: yes
+     state: started
 
 
