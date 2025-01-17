@@ -1,7 +1,9 @@
 - name: Creating Backend server
   hosts: backend
   become: yes
-  
+ 
+    user: nithin
+    mysql_root_password: "password"
   tasks:
   - name: Disable Node Js
     ansible.builtin.command: dnf module disable nodejs -y
